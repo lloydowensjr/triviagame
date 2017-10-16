@@ -1,0 +1,29 @@
+.mt-4{
+	margin-top: 5.5rem!important;
+}
+h3{
+	    margin: -30px;
+}
+.grey{
+	background-color: #eaeaea;
+}
+/*.card-img-top{
+	height: 100%!important;
+}*/
+input[type=checkbox], input[type=radio] {
+	box-sizing: border-box;
+    padding: 0;
+    margin-right: 10px;
+    
+}
+label{
+	font-size: .67em;
+}
+.h4, h4 {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 200;
+}
+.bg-light {
+     background-color: white!important;
+}
