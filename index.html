@@ -44,12 +44,13 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
           <p>
-            <a class="btn btn-primary btn-lg start" href="#">Let's Go &raquo;</a> <a class="btn btn-primary btn-lg start" href="#">DONE! &raquo;</a>
+            <a class="btn btn-primary btn-lg start" href="#">Let's Go &raquo;</a> <input type="button" id="button" value="DONE" class="btn btn-primary btn-lg start" onclick="check();">
           </p>
           
         </div>
-        <div class="col-sm-4">
-          
+        <div id="done" class="col-sm-4">
+          <p id="message"></p>
+          <p id="numcorrect"></p>
         </div>
       </div>
       <!-- /.row -->
@@ -61,14 +62,16 @@
             <div class="card-body">
               <h4 class="card-title">1. Which rap group was the first to publicly endorse sneakers in their music?</h4>
               <div class="radio">
-              <label><input type="radio" name="optradio">Public Enemy</label>
+              <form id="quiz" name="quiz">
+              <label><input type="radio" name="question1" value="PublicEnemy">Public Enemy</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">Run-D.M.C.</label>
+                <label><input type="radio" name="question1" value="RunDMC">Run DMC</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">Beastie Boys</label>
+                <label><input type="radio" name="question1" value="BeastieBoys">Beastie Boys</label>
               </div>
+              </form>
             </div>
             <div class="card-footer">
               
@@ -81,14 +84,16 @@
             <div class="card-body">
               <h4 class="card-title">2. How many different styles of Air Jordans have been created by Nike since they debuted in 1984?</h4>
               <div class="radio">
-              <label><input type="radio" name="optradio">18</label>
+                <form id="quiz2" name="quiz2">
+              <label><input type="radio" name="question2" value="18">18</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">25</label>
+                <label><input type="radio" name="question2" value="25">25</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">30</label>
+                <label><input type="radio" name="question2" value="30">30</label>
               </div>
+            </form>
             </div>
             <div class="card-footer">
               
@@ -101,11 +106,13 @@
             <div class="card-body">
               <h4 class="card-title">3. True or False: Nike’s original name was Dimension Six</h4>
               <div class="radio">
-              <label><input type="radio" name="optradio">True</label>
+                <form id="quiz" name="quiz3">
+              <label><input type="radio" name="question3" value="True">True</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">False</label>
+                <label><input type="radio" name="question3" value="False">False</label>
               </div>
+            </form>
             </div>
             <div class="card-footer">
               
@@ -125,14 +132,16 @@
             <div class="card-body">
               <h4 class="card-title">4. What cult 80s teen film helped bring Vans into the sneaker culture?</h4>
               <div class="radio">
-              <label><input type="radio" name="optradio">"Valley Girl"</label>
+                <form id="quiz" name="quiz4">
+              <label><input type="radio" name="question4" value="Valley Girl">"Valley Girl"</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">"The Breakfast Club"</label>
+                <label><input type="radio" name="question4" value="The Breakfast Club">"The Breakfast Club"</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">"Fast Times at Ridgemont High</label>
+                <label><input type="radio" name="question4" value="Fast Times at Ridgemont High">"Fast Times at Ridgemont High"</label>
               </div>
+            </form>
             </div>
             <div class="card-footer">
              
@@ -141,18 +150,20 @@
         </div>
         <div class="col-sm-4 my-4">
           <div class="card">
-            <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+            <img class="card-img-top" src="assets/images/brands.jpg" alt="">
             <div class="card-body">
               <h4 class="card-title">5. Which sneaker brand garnered the most Instagram follows in 2015?</h4>
               <div class="radio">
-              <label><input type="radio" name="optradio">Nike</label>
+                <form id="quiz" name="quiz5">
+              <label><input type="radio" name="question5" value="Nike">Nike</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">Adidas</label>
+                <label><input type="radio" name="question5" value="Adidas">Adidas</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">Reebok</label>
+                <label><input type="radio" name="question5" value="Reebok">Reebok</label>
               </div>
+            </form>
             </div>
             <div class="card-footer">
               
@@ -165,14 +176,16 @@
             <div class="card-body">
               <h4 class="card-title">6. Why are sneakers typically released on Saturdays?</h4>
               <div class="radio">
-              <label><input type="radio" name="optradio">because most people get paid on Fridays</label>
+                <form id="quiz" name="quiz6">
+              <label><input type="radio" name="question6" value="because most people get paid on Fridays">because most people get paid on Fridays</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">to prevent kids from skipping school to shop for shoes</label>
+                <label><input type="radio" name="question6" value="to prevent kids from skipping school to shop for shoes">to prevent kids from skipping school to shop for shoes</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">so more people could work the stores to sell shoes</label>
+                <label><input type="radio" name="question6" value="so more people could work the stores to sell shoes">so more people could work the stores to sell shoes</label>
               </div>
+            </form>
             </div>
             <div class="card-footer">
               
@@ -193,14 +206,16 @@
             <div class="card-body">
               <h4 class="card-title">7. Who are Hiroshi Fujiwara, Tinker Hatfield and Nathan VanHook?</h4>
               <div class="radio">
-              <label><input type="radio" name="optradio">Sneakerheads with the largest collections</label>
+                <form id="quiz" name="quiz7">
+              <label><input type="radio" name="question7" value="Sneakerheads with the largest collections">Sneakerheads with the largest collections</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">Collectible Nike sneaker designers</label>
+                <label><input type="radio" name="question7" value="Collectible Nike sneaker designers">Collectible Nike sneaker designers</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">Adidas marketing experts</label>
+                <label><input type="radio" name="question7" value="Adidas marketing experts">Adidas marketing experts</label>
               </div>
+            </form>
             </div>
             <div class="card-footer">
               
@@ -213,14 +228,16 @@
             <div class="card-body">
               <h4 class="card-title">8. Who was the first pro basketball player to have a signature shoe designed for them?</h4>
               <div class="radio">
-              <label><input type="radio" name="optradio">Michael Jordan</label>
+                <form id="quiz" name="quiz8">
+              <label><input type="radio" name="question8" value="Michael Jordan">Michael Jordan</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">Kareem Abdul-Jabbar</label>
+                <label><input type="radio" name="question8" value="Kareem Abdul-Jabbar">Kareem Abdul-Jabbar</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">Magic Johnson</label>
+                <label><input type="radio" name="question8" value="Magic Johnson">Magic Johnson</label>
               </div>
+            </form>
             </div>
             <div class="card-footer">
               
@@ -233,11 +250,13 @@
             <div class="card-body">
               <h4 class="card-title">9. True or False: Michael Jordan always wanted to sign a shoe deal with Nike.</h4>
               <div class="radio">
-              <label><input type="radio" name="optradio">True</label>
+                <form id="quiz" name="quiz9">
+              <label><input type="radio" name="question9" value="True">True</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">False</label>
+                <label><input type="radio" name="question9" value="False">False</label>
               </div>
+            </form>
             </div>
             <div class="card-footer">
               
@@ -258,14 +277,16 @@
             <div class="card-body">
               <h4 class="card-title">10. What is the largest sneakerhead summit in the world?</h4>
               <div class="radio">
-              <label><input type="radio" name="optradio">H-Town Sneaker Summit</label>
+                <form id="quiz" name="quiz10">
+              <label><input type="radio" name="question10" value="HTown Sneaker Summit">H-Town Sneaker Summit</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">Fresh Out Of The Box</label>
+                <label><input type="radio" name="question10" value="Fresh Out Of The Box">Fresh Out Of The Box</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">Sneakercon</label>
+                <label><input type="radio" name="question10" value="Sneakercon">Sneakercon</label>
               </div>
+            </form>
             </div>
             <div class="card-footer">
               
@@ -278,11 +299,13 @@
             <div class="card-body">
               <h4 class="card-title">11. True or False: Chuck Taylor invented the basketball shoe.</h4>
               <div class="radio">
-              <label><input type="radio" name="optradio">True</label>
+                <form id="quiz" name="quiz11">
+              <label><input type="radio" name="question11" value="True">True</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">False</label>
+                <label><input type="radio" name="question11" value="False">False</label>
               </div>
+            </form>
             </div>
             <div class="card-footer">
               
@@ -295,14 +318,16 @@
             <div class="card-body">
               <h4 class="card-title">12. If a sneakerhead is someone who's obsessed with sneakers, what is a "hypebeast" sneakerhead?</h4>
               <div class="radio">
-              <label><input type="radio" name="optradio">they buy only one brand of shoe</label>
+                <form id="quiz" name="quiz12">
+              <label><input type="radio" name="question12" value="they buy only one brand shoe">they buy only one brand of shoe</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">they only buy shoes based on buzz around its release</label>
+                <label><input type="radio" name="question12" value="they only buy shoes based on buzz around its release">they only buy shoes based on buzz around its release</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">they only talk about the shoes he or she owns</label>
+                <label><input type="radio" name="question12" value="they only talk about the shoes he or she owns">they only talk about the shoes he or she owns</label>
               </div>
+            </form>
             </div>
             <div class="card-footer">
               
@@ -324,11 +349,13 @@
             <div class="card-body">
               <h4 class="card-title">13. True or False: Michael Jordan was fined $5,000 per game because the black and red Air Jordan Air 1 were not regulation court shoes.</h4>
               <div class="radio">
-              <label><input type="radio" name="optradio">True</label>
+                <form id="quiz" name="quiz13">
+              <label><input type="radio" name="question13" value="True">True</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">False</label>
+                <label><input type="radio" name="question13" value="False">False</label>
               </div>
+            </form>
             </div>
             <div class="card-footer">
               
@@ -341,14 +368,16 @@
             <div class="card-body">
               <h4 class="card-title">14. In 2012, how much did a pair of Nike Air Yeezy II sneakers, designed by rapper Kanye West, sell for on eBay before it went on sale to the public?</h4>
               <div class="radio">
-              <label><input type="radio" name="optradio">50,000</label>
+                <form id="quiz" name="quiz14">
+              <label><input type="radio" name="question14" value="50,000">50,000</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">25,000</label>
+                <label><input type="radio" name="question14" value="25,000">25,000</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">90,300</label>
+                <label><input type="radio" name="question14" value="90,300">90,300</label>
               </div>
+            </form>
             </div>
             <div class="card-footer">
              
@@ -361,14 +390,16 @@
             <div class="card-body">
               <h4 class="card-title">15. How long did sneakerheads have to wait for the Nike Air Mags featured in the movie Back to the Future Part II?</h4>
               <div class="radio">
-              <label><input type="radio" name="optradio">26 Years</label>
+                <form id="quiz" name="quiz15">
+              <label><input type="radio" name="question15" value="26 Years">26 Years</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">22 Years</label>
+                <label><input type="radio" name="question15" value="22 Years">22 Years</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">10 Years</label>
+                <label><input type="radio" name="question15" value="10 Years">10 Years</label>
               </div>
+            </form>
             </div>
             <div class="card-footer">
               
@@ -398,7 +429,7 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
+    <script src="assets/js/game.js" type="text/javascript"></script>
   </body>
 
 </html>
