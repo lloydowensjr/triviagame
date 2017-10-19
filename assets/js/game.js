@@ -1,3 +1,9 @@
+$(document).ready(function() {
+
+$("#finish").on("click",function(){
+		check()
+	});
+
 function check(){
 
 
@@ -85,6 +91,7 @@ function check(){
 			correct++;
 		}
 
+	
 
 	var messages = ["Sneaker Head", "Hypebeast", "Shoebarn Shopper"];
 	
@@ -94,17 +101,68 @@ function check(){
 			range = 2;
 		}	
 
-		if (correct > 0 && correct < 3) {
+		if (correct > 0 && correct < 10) {
 			range = 1;
 		}
 
-		if (correct > 2) {
+		if (correct > 15) {
 			range = 0;
 		}
 
 	document.getElementById("done").style.visibility = "visible";
 
-	document.getElementById("message").innerHTML = messages[range];
-	document.getElementById("numcorrect").innerHTML = "You got " + correct + " correct.";
+	$("#message").html(messages[range]);
+	$("#numcorrect").html("You got " + correct + " correct.");
 
 }
+
+
+	var timer;
+	var counter = 90;
+
+	$(".start").on("click",function(){
+		startQuiz();
+	});
+	
+	function startQuiz(){
+		timer = setInterval(decTime,1000 * 90);
+	};
+
+	function decTime(){
+		counter = counter - 1;
+		
+		document.getElementById(".time").innerHTML = counter;
+		if (counter <= 0){
+			clearInterval(timer);
+			document.getElementById(".time").innerHTML = "Sorry, Times Up!".toUpperCase();
+			return;
+		}
+
+
+	}
+	
+
+
+
+
+
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
